@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color:rgb(112, 189, 245); /*para el fondo del nav*/
+    padding: 10px; /*el padding indica cuanto espacio se guardara en entre el contenedo y los componentes destro del el*/
+    display: flex; /*colocara los elementos a la par */
+    justify-content:space-between;
+    
+
+
+}
+.enlace{
+
+    text-align: center;
+    display:inline-block;
+    background-color: pink;
+    color: black;
+    font-style: none;
+    font-weight: bold;
+    padding: 10px 30px;
+
+    text-decoration: none;
+}
+
+/* efectos para cuando el maouse pase por encima  se llama hober*/
+.enlace:hover{
+    background-color: rgb(245, 157, 172);
+    font-size: 20px;
+}
+
+.boton-menu{
+    background: rgb(245, 157, 172);
+    color : #fff; 
+    padding: 10px 0; /*sera el margan intior del contenido */
+    border: 3px solid #000; /*establece el estilo del borde para el caso sera una linea solida*/ 
+    display : none; /*esto nos indica que como la pantalla general no aparecera
+                    y solo dentro del query estara disponibles*/
+}
+
+
+/* efectos para el diseño responsivo */
+/* efectos para el diseño responsivo */
+/* entres 0 y 600 se modificarar */
+@media(max-width: 600px){
+    nav{
+        flex-direction: column;
+    
+    }
+    .enlace{
+        margin: 7px;
+        border-radius: 20px;
+
+    }
+    /*para que el boton solo aparezca en pantalla establecida lo ingresamos en el query*/
+    .boton-menu{
+        display: inline-block; 
+        border-radius: 20px;
+    }
+    .desaparece{
+        display: none; 
+    }
+
+}
